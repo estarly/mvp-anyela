@@ -1,39 +1,48 @@
+"use client";
+import { useEffect } from "react";
+import Banner from "@/components/GymCoaching/Banner";
+import DigitalFitnessCoaching from "@/components/GymCoaching/DigitalFitnessCoaching";
+import DownloadTheApp from "@/components/GymCoaching/DownloadTheApp";
+import Features from "@/components/GymCoaching/Features";
+import FeedbackSlider from "@/components/GymCoaching/FeedbackSlider";
+import FunFacts from "@/components/GymCoaching/FunFacts";
+import Instructor from "@/components/GymCoaching/Instructor";
+import LatestBlogPost from "@/components/GymCoaching/LatestBlogPost";
+import TopSellingCourses from "@/components/GymCoaching/TopSellingCourses";
+import WhyChooseUs from "@/components/GymCoaching/WhyChooseUs";
+import AudioPlayer from "@/components/AudioPlayer";
 import { getHomepageCourses } from "@/actions/getCourses";
-import { getCurrentUser } from "@/actions/getCurrentUser";
-import Banner from "@/components/Index/Banner";
-import DistanceLearning from "@/components/Index/DistanceLearning";
-import Features from "@/components/Index/Features";
-import IntroVideo from "@/components/Index/IntroVideo";
-import Partner from "@/components/Index/Partner";
-import SelfDevelopmentCourse from "@/components/Index/SelfDevelopmentCourse";
-import Testimonials from "@/components/Index/Testimonials";
-import TopSellingCourses from "@/components/Index/TopSellingCourses";
-import Cta from "@/components/Shared/Cta";
-import DistanceLearningTwo from "@/components/Shared/DistanceLearningTwo";
-import FunFactsFour from "@/components/Shared/FunFactsFour";
-import LatestNews from "@/components/Shared/LatestNews";
+import IntroVideo from "@/components/SuccessStory/IntroVideo";
+import OurStory from "@/components/SuccessStory/OurStory";
+import PageBanner from "@/components/Shared/PageBanner";
 
-export const metadata = {
-	title: "Home | eDemy - React Next.js Education LMS Template",
-};
+const Page = async () => {
+	//const { courses } = await getHomepageCourses();
 
-export default async function Home() {
-	const currentUser = await getCurrentUser();
-	const { courses } = await getHomepageCourses();
+
 	return (
 		<>
-			<Banner currentUser={currentUser} />
+			<AudioPlayer audioName="voz/vozWelcome.mp3" />
+			<Banner />
 			<Features />
-			<TopSellingCourses courses={courses} currentUser={currentUser} />
-			<DistanceLearning />
-			<Testimonials />
-			<SelfDevelopmentCourse currentUser={currentUser} />
-			<Partner />
+			<PageBanner
+				pageTitle="Success Story"
+				homePageUrl=""
+				homePageText=""
+				activePageText=""
+			/>
 			<IntroVideo />
-			<FunFactsFour />
-			<LatestNews />
-			<DistanceLearningTwo />
-			<Cta />
+			<OurStory />
+			{/*<WhyChooseUs />
+			<TopSellingCourses courses={[]} />
+			<FunFacts />*/}
+			<FeedbackSlider />
+			<Instructor />
+			{/*<DownloadTheApp />
+			<LatestBlogPost />
+			<DigitalFitnessCoaching />*/}
 		</>
 	);
-}
+};
+
+export default Page;

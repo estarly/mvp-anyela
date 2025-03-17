@@ -11,8 +11,7 @@ const Instructor = () => {
 			<div className="trainer-area pt-100 pb-70">
 				<div className="container">
 					<div className="section-title">
-						<span className="sub-title">Instructor</span>
-						<h2>TEAM OF EXPERT COACHES</h2>
+						<h2>Marcas</h2>
 						<p>
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
@@ -114,9 +113,7 @@ const Instructor = () => {
 									alt="image"
 								/>
 
-								<span className="designation">
-									BARRE EXPERT
-								</span>
+								
 
 								<div className="content">
 									<h3>SARAH TAYLOR</h3>
@@ -172,9 +169,7 @@ const Instructor = () => {
 									alt="image"
 								/>
 
-								<span className="designation">
-									BOOTCAMP EXPERT
-								</span>
+								
 
 								<div className="content">
 									<h3>JAMES ANDY</h3>
@@ -230,9 +225,7 @@ const Instructor = () => {
 									alt="image"
 								/>
 
-								<span className="designation">
-									CROSSFIT EXPERT
-								</span>
+								
 
 								<div className="content">
 									<h3>LINA LUCY</h3>
@@ -287,8 +280,6 @@ const Instructor = () => {
 									height={650}
 									alt="image"
 								/>
-
-								<span className="designation">GYM EXPERT</span>
 
 								<div className="content">
 									<h3>ALINA STIVE</h3>

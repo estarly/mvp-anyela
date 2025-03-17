@@ -8,6 +8,16 @@ const FeedbackSlider = () => {
 	return (
 		<>
 			<div className="gym-feedback-area ptb-100">
+			<div className="container">
+					<div className="section-title">
+						<h2>Testimonials</h2>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua.
+						</p>
+					</div>
+				</div>
 				<div className="container-fluid">
 					<Swiper
 						navigation={true}
